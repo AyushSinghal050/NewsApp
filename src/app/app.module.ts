@@ -10,6 +10,7 @@ import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { HttpModule } from '../../node_modules/@angular/http';
+import { CompleteNewsComponent } from './complete-news/complete-news.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HttpModule } from '../../node_modules/@angular/http';
     CnetComponent,
     MyFox8Component,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    CompleteNewsComponent,
   ],
   imports: [
     BrowserModule,

@@ -9,20 +9,14 @@ export class AppService {
   Data = [];
 
   constructor(private http: Http) { }
+
   getData() {
     console.log('Data Fetched');
-    return this.http.get('https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=9557365da6384366b702fba666bf1149');
+    return this.http.get('https://jsonplaceholder.typicode.com/posts');
   }
 
-  getNews() {
-    this.getData()
-    .subscribe(
-      (response: Response) => {
-          const data = response.json();
-          this.Data = data;
-      },
-      (error) => console.log(error)
-    );
+  displayCompanyNews(companyNumber: number) {
+    return this.Data.filter(x => x.userId === companyNumber);
   }
 
 }

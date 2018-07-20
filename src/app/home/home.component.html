@@ -1,3 +1,15 @@
-<p>
-  home works!
-</p>
+<div class="container">
+    <div class="card" *ngFor="let data of displayHome(); let i = index">
+      <div class="card-inner">
+        <div class="card-header">
+         {{data.title}}
+        </div>
+        <div class="card-body">
+            {{data.body}}
+        </div>
+        <div class="card-footer" (click)="showComplete(i)">
+            Read More...
+        </div>
+      </div>
+    </div>
+  </div>

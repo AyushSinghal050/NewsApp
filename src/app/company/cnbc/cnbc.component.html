@@ -1,3 +1,15 @@
-<p>
-  cnbc works!
-</p>
+<div class="container">
+  <div class="card" *ngFor="let data of displayNews(); let i = index">
+    <div class="card-inner">
+      <div class="card-header">
+       {{data.title}}
+      </div>
+      <div class="card-body">
+          {{data.body}}
+      </div>
+      <div class="card-footer" (click)="showComplete(i)">
+          Cnbc: Read More...
+      </div>
+    </div>
+  </div>
+</div>
