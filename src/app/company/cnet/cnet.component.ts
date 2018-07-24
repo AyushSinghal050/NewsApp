@@ -16,11 +16,11 @@ export class CnetComponent implements OnInit {
   }
 
   displayNews() {
-    return this.appService.displayCompanyNews(2);
+    return this.appService.displayCompanyNews('Cnet.com');
   }
 
   showComplete(id: number) {
-    this.router.navigate([id, {ref: 2}], {relativeTo: this.route});
+    this.router.navigate([id, {ref: 'Cnet.com'}], {relativeTo: this.route});
   }
 
 

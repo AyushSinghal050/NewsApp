@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
     .subscribe(
       (response: Response) => {
           const data = response.json();
-          this.appService.Data = data;
+          this.appService.Data = data.articles;
           console.log(this.appService.Data);
       },
       (error) => console.log(error)

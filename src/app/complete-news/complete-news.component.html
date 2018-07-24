@@ -16,13 +16,17 @@
 </div> -->
 
 
-<h1>{{companyName}}</h1>
+<h1>{{data.source.name}}</h1>
 <hr>
-<h2>{{data.title}}</h2>
+<h2><em><u>{{data.title}}</u></em></h2>
 <section>
-  <p>{{data.body}}
+  <p>{{data.description}}
+	<p>{{data.description}}
+	<p>{{data.description}}
+	<p>{{data.description}}
+	
 </section>
 
-<div class="card-footer" (click)="goBack()">
+<div class="card-footer" (click)="goBack()" style="width: 10%;">
   <- Back
 </div>

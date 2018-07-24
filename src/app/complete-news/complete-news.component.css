@@ -26,12 +26,13 @@ section {
   background-repeat: no-repeat;
   background-position: center;
   background-color: aliceblue;
+  padding: 2%;
 }
 section p:first-of-type {
   margin-top: 0;
 }
 
 div.card-footer {
-	position: absolute;
+	position: fixed;
 	bottom: 0;
 }

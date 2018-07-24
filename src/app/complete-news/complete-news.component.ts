@@ -10,10 +10,9 @@ import { AppService } from '../api.service';
 export class CompleteNewsComponent implements OnInit {
 
   id: number;
-  companyNumber: number;
   Data = [];
   data: object;
-  companyName = 'Codepen Times';
+  companyName: string;
 
   constructor(private appService: AppService, private router: Router, private route: ActivatedRoute) { }
 
@@ -22,16 +21,15 @@ export class CompleteNewsComponent implements OnInit {
     .subscribe(
       (params: Params) => {
         this.id = +params['id'];
-        this.companyNumber = +params['ref'];
+        this.companyName = params['ref'];
       }
     );
-    this.setCompanyName();
     this.display();
   }
 
   display() {
-    if (this.companyNumber) {
-      this.Data = this.appService.displayCompanyNews(this.companyNumber);
+    if (this.companyName) {
+      this.Data = this.appService.displayCompanyNews(this.companyName);
     } else {
       this.Data = this.appService.Data;
     }
@@ -41,14 +39,6 @@ export class CompleteNewsComponent implements OnInit {
 
   goBack() {
     this.router.navigate(['../'], {relativeTo: this.route});
-  }
-
-  setCompanyName() {
-    switch (this.companyNumber) {
-      case 1: this.companyName = 'CNBC'; break;
-      case 2: this.companyName = 'CNET'; break;
-      case 3: this.companyName = 'MyFox8';
-    }
   }
 
 }

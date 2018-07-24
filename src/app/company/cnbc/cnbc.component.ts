@@ -16,11 +16,11 @@ export class CnbcComponent implements OnInit {
   }
 
   displayNews() {
-    return this.appService.displayCompanyNews(1);
+    return this.appService.displayCompanyNews('CNBC');
   }
 
   showComplete(id: number) {
-    this.router.navigate([id, {ref: 1}], {relativeTo: this.route});
+    this.router.navigate([id, {ref: 'CNBC'}], {relativeTo: this.route});
   }
 
 

@@ -16,11 +16,11 @@ export class MyFox8Component implements OnInit {
   }
 
   displayNews() {
-    return this.appService.displayCompanyNews(3);
+    return this.appService.displayCompanyNews('Reuters');
   }
 
   showComplete(id: number) {
-    this.router.navigate([id, {ref: 3}], {relativeTo: this.route});
+    this.router.navigate([id, {ref: 'Reuters'}], {relativeTo: this.route});
   }
 
 }

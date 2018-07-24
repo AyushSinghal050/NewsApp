@@ -12,11 +12,11 @@ export class AppService {
 
   getData() {
     console.log('Data Fetched');
-    return this.http.get('https://jsonplaceholder.typicode.com/posts');
+    return this.http.get('https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=9557365da6384366b702fba666bf1149');
   }
 
-  displayCompanyNews(companyNumber: number) {
-    return this.Data.filter(x => x.userId === companyNumber);
+  displayCompanyNews(companyName: string) {
+    return this.Data.filter(x => x.source.name === companyName);
   }
 
 }
