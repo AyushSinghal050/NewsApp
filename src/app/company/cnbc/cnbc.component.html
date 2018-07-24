@@ -1,15 +1,21 @@
-<div class="container">
-  <div class="card" *ngFor="let data of displayNews(); let i = index">
-    <div class="card-inner">
-      <div class="card-header">
-       {{data.title}}
-      </div>
-      <div class="card-body">
-          {{data.description}}
-      </div>
-      <div class="card-footer" (click)="showComplete(i)">
-          Read More...
+<div class="container" *ngIf="reloadTemplate() > 0; else reload">
+    <div class="card" *ngFor="let data of displayNews(); let i = index">
+      <div class="card-inner">
+        <div class="card-header">
+         {{data.title}}
+        </div>
+        <div class="card-body">
+            {{data.description}}
+        </div>
+        <div class="card-footer" (click)="showComplete(i)">
+            Read More...
+        </div>
       </div>
     </div>
   </div>
-</div>
+  
+  <ng-template #reload>
+      <img src="../../../assets/reloadTemplate.png" style="width: 100%;">
+  </ng-template>
+    
+    

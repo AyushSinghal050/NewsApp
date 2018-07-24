@@ -23,5 +23,8 @@ export class CnetComponent implements OnInit {
     this.router.navigate([id, {ref: 'Cnet.com'}], {relativeTo: this.route});
   }
 
+  reloadTemplate() {
+    return this.appService.displayCompanyNews('Cnet.com').length;
+  }
 
 }

@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" *ngIf="reloadTemplate() > 0; else reload">
   <div class="card" *ngFor="let data of displayNews(); let i = index">
     <div class="card-inner">
       <div class="card-header">
@@ -13,3 +13,8 @@
     </div>
   </div>
 </div>
+
+<ng-template #reload>
+  <img src="../../../assets/reloadTemplate.png" style="width: 100%;">
+</ng-template>
+

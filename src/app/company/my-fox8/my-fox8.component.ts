@@ -23,4 +23,9 @@ export class MyFox8Component implements OnInit {
     this.router.navigate([id, {ref: 'Reuters'}], {relativeTo: this.route});
   }
 
+  reloadTemplate() {
+    console.log(this.appService.displayCompanyNews('Reuters').length);
+    return this.appService.displayCompanyNews('Reuters').length;
+  }
+
 }
