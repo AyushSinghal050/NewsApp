@@ -8,10 +8,9 @@ export class AppService {
 
   Data = [];
 
-  constructor(private http: Http) { }
+  constructor(private http: Http) {}
 
   getData() {
-    console.log('Data Fetched');
     return this.http.get('https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=9557365da6384366b702fba666bf1149');
   }
 

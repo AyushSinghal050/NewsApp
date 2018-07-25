@@ -24,7 +24,6 @@ export class MyFox8Component implements OnInit {
   }
 
   reloadTemplate() {
-    console.log(this.appService.displayCompanyNews('Reuters').length);
     return this.appService.displayCompanyNews('Reuters').length;
   }
 

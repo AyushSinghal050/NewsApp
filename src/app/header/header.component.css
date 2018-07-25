@@ -1,3 +1,7 @@
+.active button{
+    background: #9EEB62;
+}
+
 body{
     background: #303030;
   }
@@ -361,3 +365,6 @@ body{
     
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
   }
+
+
+

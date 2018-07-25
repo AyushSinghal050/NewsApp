@@ -14,17 +14,16 @@ export class HomeComponent implements OnInit {
   constructor(private http: Http, private appService: AppService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    console.log('Home Component');
     this.getNews();
   }
 
   getNews() {
+    console.log('powered by NewsAPI.org');
     this.appService.getData()
     .subscribe(
       (response: Response) => {
           const data = response.json();
           this.appService.Data = data.articles;
-          console.log(this.appService.Data);
       },
       (error) => console.log(error)
   );
