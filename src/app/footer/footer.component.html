@@ -1,0 +1,13 @@
+<nav aria-label="Page navigation example" *ngIf="showFooter()">
+
+  <ul class="pagination justify-content-center">
+    <li class="page-item" (click)="decPage()" [ngClass]="{'page-item disabled': currPage===1}"><a class="page-link">Previous</a></li>
+
+    <span *ngFor="let page of getTotalPages()">
+      <li class="page-item" (click)="setPage(page)" [ngClass]="{'page-item active': page===currPage}"><a class="page-link">{{page}}</a></li>
+    </span>
+    
+    <li class="page-item" (click)="incPage()" [ngClass]="{'page-item disabled': currPage===totalPages}"><a class="page-link">Next</a></li>
+  </ul>
+
+</nav>

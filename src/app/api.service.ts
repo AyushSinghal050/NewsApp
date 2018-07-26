@@ -7,6 +7,10 @@ import { Http, Response } from '@angular/http';
 export class AppService {
 
   Data = [];
+  currPage = 1;
+  totalPages: number;
+  itemsPerPage = 4;
+  showFooter = true;
 
   constructor(private http: Http) {}
 

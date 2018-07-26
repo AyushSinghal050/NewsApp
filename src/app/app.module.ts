@@ -11,6 +11,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { HttpModule } from '../../node_modules/@angular/http';
 import { CompleteNewsComponent } from './complete-news/complete-news.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { CompleteNewsComponent } from './complete-news/complete-news.component';
     HeaderComponent,
     HomeComponent,
     CompleteNewsComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
