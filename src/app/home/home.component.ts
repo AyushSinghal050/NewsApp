@@ -28,7 +28,6 @@ export class HomeComponent implements OnInit, OnDestroy {
           const data = response.json();
           this.appService.Data = data.articles;
           this.appService.totalPages = Math.ceil(data.totalResults / this.appService.itemsPerPage);
-          console.log(this.appService.totalPages, 'Total');
       },
       (error) => console.log(error)
   );

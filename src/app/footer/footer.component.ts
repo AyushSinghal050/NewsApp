@@ -21,21 +21,25 @@ export class FooterComponent implements OnInit {
 
   incPage() {
     if (this.appService.currPage !== this.appService.totalPages) {
+      this.currPage += 1;
       this.appService.currPage += 1;
     }
   }
 
   decPage() {
     if (this.appService.currPage !== 1) {
+      this.currPage -= 1;
       this.appService.currPage -= 1;
     }
   }
 
   setPage(page: number) {
+    this.currPage = page;
     this.appService.currPage = page;
   }
 
   showFooter() {
+    this.currPage = this.appService.currPage;
     return this.appService.showFooter;
   }
 
