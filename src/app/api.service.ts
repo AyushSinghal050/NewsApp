@@ -9,7 +9,7 @@ export class AppService {
   Data = [];
   currPage = 1;
   totalPages: number;
-  itemsPerPage = 4;
+  itemsPerPage = 6;
   showFooter = true;
 
   constructor(private http: Http) {}
