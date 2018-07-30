@@ -37,6 +37,10 @@ export class CompleteNewsComponent implements OnInit, OnDestroy {
       this.Data = this.appService.Data;
     }
     this.data = this.Data[this.id];
+
+    if (!this.data) {
+      this.router.navigate(['/']);
+    }
      return this.data;
   }
 
